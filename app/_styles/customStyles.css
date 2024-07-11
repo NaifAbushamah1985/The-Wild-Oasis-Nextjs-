@@ -1,0 +1,25 @@
+/* customStyles.css */
+@keyframes fillProgress {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.button-progress {
+  position: relative;
+  overflow: hidden;
+}
+
+.button-progress::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5); /* Adjust color as needed */
+  width: 0;
+  transition: width 0.5s ease-in-out;
+}
