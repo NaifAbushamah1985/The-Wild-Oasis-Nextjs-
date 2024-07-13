@@ -20,6 +20,18 @@ export const metadata = {
   },
   description:
     "Luxurious cabin hotel, located in the of Italian Dolomites, surrounded by beautiful mountains and dark forests",
+  twitter: {
+    card: "summary_large_image",
+  },
+  opeGraph: {
+    title: "The Wild Oasis",
+    description:
+      "Luxurious cabin hotel, located in the of Italian Dolomites, surrounded by beautiful mountains and dark forests",
+    type: "website",
+    local: "ar_SA",
+    url: "https://the-wild-oasis-nextjs-umber.vercel.app",
+    siteName: "The Wild Oasis",
+  },
 };
 
 export default function RootLayout({ children }) {
