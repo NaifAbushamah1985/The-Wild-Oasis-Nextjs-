@@ -2,7 +2,7 @@
     <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       
         <sitemap>
-          <loc>http://localhost:3000/sitemaps/homepage.xml</loc>
+          <loc>https://the-wild-oasis-nextjs-umber.vercel.app/sitemaps/homepage.xml</loc>
           <lastmod>2024-07-15</lastmod>
           <changefreq>daily</changefreq>
           <priority>1.0</priority>
@@ -10,7 +10,7 @@
       
 
         <sitemap>
-          <loc>http://localhost:3000/sitemaps/about.xml</loc>
+          <loc>https://the-wild-oasis-nextjs-umber.vercel.app/sitemaps/about.xml</loc>
           <lastmod>2024-07-15</lastmod>
           <changefreq>daily</changefreq>
           <priority>1.0</priority>
@@ -18,7 +18,7 @@
       
 
         <sitemap>
-          <loc>http://localhost:3000/sitemaps/cabins.xml</loc>
+          <loc>https://the-wild-oasis-nextjs-umber.vercel.app/sitemaps/cabins.xml</loc>
           <lastmod>2024-07-15</lastmod>
           <changefreq>daily</changefreq>
           <priority>1.0</priority>
@@ -26,7 +26,7 @@
       
 
         <sitemap>
-          <loc>http://localhost:3000/sitemaps/login.xml</loc>
+          <loc>https://the-wild-oasis-nextjs-umber.vercel.app/sitemaps/login.xml</loc>
           <lastmod>2024-07-15</lastmod>
           <changefreq>daily</changefreq>
           <priority>1.0</priority>
