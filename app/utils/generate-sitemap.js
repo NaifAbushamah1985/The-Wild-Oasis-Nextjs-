@@ -1,4 +1,5 @@
 // app/utils/generate-sitemap.js
+
 "use server";
 
 import { getCabins } from "../_lib/data-service";
