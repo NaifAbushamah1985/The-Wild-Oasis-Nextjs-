@@ -11,10 +11,6 @@ const nextConfig = {
     ],
   },
   // output: "export",
-
-  experimental: {
-    appDir: true, // Enable app directory support if needed
-  },
 };
 
 export default nextConfig;

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      
+        <sitemap>
+          <loc>http://localhost:3000/sitemaps/homepage.xml</loc>
+          <lastmod>2024-07-15</lastmod>
+          <changefreq>daily</changefreq>
+          <priority>1.0</priority>
+        </sitemap>
+      
+
+        <sitemap>
+          <loc>http://localhost:3000/sitemaps/about.xml</loc>
+          <lastmod>2024-07-15</lastmod>
+          <changefreq>daily</changefreq>
+          <priority>1.0</priority>
+        </sitemap>
+      
+
+        <sitemap>
+          <loc>http://localhost:3000/sitemaps/cabins.xml</loc>
+          <lastmod>2024-07-15</lastmod>
+          <changefreq>daily</changefreq>
+          <priority>1.0</priority>
+        </sitemap>
+      
+
+        <sitemap>
+          <loc>http://localhost:3000/sitemaps/login.xml</loc>
+          <lastmod>2024-07-15</lastmod>
+          <changefreq>daily</changefreq>
+          <priority>1.0</priority>
+        </sitemap>
+      
+    </sitemapindex>

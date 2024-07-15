@@ -1,0 +1,111 @@
+// app/sitemap.js
+
+export default function sitemap() {
+  return [
+    {
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 1,
+    },
+    {
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/about`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/account`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.5,
+    },
+    {
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/cabins`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.5,
+    },
+  ];
+}
+
+/*
+import { getCabins } from "./_lib/data-service";
+
+const cabins = await getCabins();
+
+// Function to generate the main sitemap
+async function generateMainSitemap() {
+  const sitemap = [
+    {
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/`,
+      lastModified: new Date().toISOString(),
+    },
+    {
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/about`,
+      lastModified: new Date().toISOString(),
+    },
+    {
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/cabins`,
+      lastModified: `${cabins.at(cabins.length - 1).created_at}`,
+    },
+    {
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/login`,
+      lastModified: new Date().toISOString(),
+    },
+  ];
+
+  return sitemap;
+}
+
+// Function to generate cabins sitemap
+async function generateCabinsSitemap(id) {
+  const start = id * 50000;
+  const end = start + 50000;
+
+  // Slice cabins to limit to 50,000 items
+  const slicedCabins = cabins.slice(start, end);
+
+  return slicedCabins.map((cabin) => ({
+    url: `${process.env.NEXT_PUBLIC_BASE_URL}/cabins/${cabin.id}`,
+    lastModified: cabin.created_at,
+  }));
+}
+
+// Function to generate sitemaps
+export async function generateSitemaps() {
+  const mainSitemap = await generateMainSitemap();
+
+  // Generate multiple dynamic sitemaps for cabins based on the number of cabins
+  const numSitemaps = Math.ceil(cabins.length / 50000);
+
+  const sitemaps = [];
+  for (let i = 0; i < numSitemaps; i++) {
+    const cabinsSitemap = await generateCabinsSitemap(i);
+    sitemaps.push({ id: i + 1, name: `cabins-${i + 1}`, urls: cabinsSitemap });
+  }
+
+  return [{ id: 1, name: "main", urls: mainSitemap }, ...sitemaps];
+}
+
+// Default export for the sitemap function
+export default async function sitemap({ id }) {
+  const sitemaps = await generateSitemaps();
+
+  // Find and return the correct sitemap based on id
+  const selectedSitemap = sitemaps.find(
+    (sitemap) => sitemap.id === parseInt(id)
+  );
+
+  if (!selectedSitemap) {
+    return { error: "Sitemap not found" };
+  }
+
+  return selectedSitemap.urls
+    .map(
+      (url) =>
+        `<url><loc>${url.url}</loc><lastmod>${url.lastModified}</lastmod></url>`
+    )
+    .join("");
+}
+*/
