@@ -59,7 +59,7 @@ export default async function generateIndexSitemap() {
 export async function generateAboutSitemap() {
   const sitemaps = [
     {
-      url: "http://localhost:3000/about",
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/about`,
       lastmod: `${todayData}`,
       changefreq: "weekly",
       priority: "0.8",
@@ -94,7 +94,7 @@ export async function generateAboutSitemap() {
 export async function generateHomepageSitemap() {
   const sitemaps = [
     {
-      url: "http://localhost:3000",
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
       lastmod: `${todayData}`,
       changefreq: "weekly",
       priority: "0.8",
@@ -129,7 +129,7 @@ export async function generateHomepageSitemap() {
 export async function generateLoginSitemap() {
   const sitemaps = [
     {
-      url: "http://localhost:3000/account",
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/account`,
       lastmod: `${todayData}`,
       changefreq: "weekly",
       priority: "0.8",
@@ -165,7 +165,7 @@ export async function generateCabinsSitemap() {
   const cabins = await getCabins();
 
   const sitemaps = cabins.map((cabin) => ({
-    url: `http://localhost:3000/cabins/${cabin.id}`, // Assuming each cabin has a unique id
+    url: `${process.env.NEXT_PUBLIC_BASE_URL}/cabins/${cabin.id}`, // Assuming each cabin has a unique id
     lastmod: cabin.created_at.split("T")[0], // Use the cabin's created_at date as lastmod
     changefreq: "daily",
     priority: "0.8",
