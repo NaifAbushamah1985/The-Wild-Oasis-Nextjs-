@@ -10,7 +10,7 @@ export default async function handler(req, res) {
     res.setHeader("Content-Encoding", "gzip");
 
     const sitemapStream = new SitemapStream({
-      hostname: "https://example.com",
+      hostname: `${process.env.NEXT_PUBLIC_BASE_URL}`,
     });
     const gzip = createGzip();
     const pipeline = sitemapStream.pipe(gzip);
